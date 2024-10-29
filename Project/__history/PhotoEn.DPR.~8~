@@ -1,0 +1,17 @@
+program PhotoEn;
+
+uses
+  Forms,
+  Main in 'Main.pas' {MainForm},
+  About in 'About.pas' {PAbout},
+  uCloseTabSheet in 'uCloseTabSheet.pas';
+
+{$R *.RES}
+
+begin
+  Application.Title := 'Графический редактор';
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TPAbout, PAbout);
+  Application.Run;
+end.
+

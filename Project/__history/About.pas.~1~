@@ -1,0 +1,41 @@
+unit About;
+
+interface
+
+uses
+  Windows, Classes, Graphics, Forms, Controls, StdCtrls, Buttons, ExtCtrls, ImageEnProc, ImageEnIO,
+  ImageEnView, ieview;
+
+type
+  TfrmAboutBox = class(TForm)
+    Panel1: TPanel;
+    ProductName: TLabel;
+    lblCopyright: TLabel;
+    Label1: TLabel;
+    OKButton: TButton;
+    procedure FormShow(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+uses
+  SysUtils, ShellAPI;
+
+{$R *.DFM}
+
+procedure TfrmAboutBox.FormShow(Sender: TObject);
+begin
+  lblCopyright.Caption := format( 'Copyright 1998 - %d by Xequte', [ CurrentYear() ]);
+end;
+
+procedure TfrmAboutBox.Label1Click(Sender: TObject);
+begin
+  ShellExecute(Handle, 'open', PChar('http://www.imageen.com'), nil, nil, SW_MAXIMIZE);
+end;
+
+end.

@@ -1,0 +1,24 @@
+program PhotoEn;
+
+uses
+  Forms,
+  Main in 'Main.PAS' {MainForm},
+  About in 'About.pas' {frmAboutBox},
+  ColorSel in 'ColorSel.pas' {frmColorSelector},
+  Rotate in 'Rotate.pas' {frmRotate},
+  MergeDialog in 'MergeDialog.pas' {frmMergeDialog},
+  Histogram in 'Histogram.pas' {frmHistogram},
+  ConvBW in 'ConvBW.pas' {frmConvertBW},
+  ResizeImage in 'ResizeImage.pas' {frmResize},
+  ZoomProp in 'ZoomProp.pas' {frmZoomProperties},
+  HiddenText in 'HiddenText.pas' {frmHiddenText},
+  uCloseTabSheet in 'uCloseTabSheet.pas';
+
+{$R *.RES}
+
+begin
+  Application.Title := 'PhotoEn - ImageEn Demo';
+  Application.CreateForm(TMainForm, MainForm);
+  Application.Run;
+end.
+

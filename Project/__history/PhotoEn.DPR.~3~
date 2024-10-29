@@ -1,0 +1,17 @@
+program PhotoEn;
+
+uses
+  Forms,
+  Main in 'Main.pas' {MainForm},
+  About in 'About.pas' {PAbout},
+  uCloseTabSheet in 'uCloseTabSheet.pas',
+  Loading in 'Loading.pas';
+
+{$R *.RES}
+
+begin
+  Application.Title := 'PhotoEn - ImageEn Demo';
+  Application.CreateForm(TMainForm, MainForm);
+  Application.Run;
+end.
+

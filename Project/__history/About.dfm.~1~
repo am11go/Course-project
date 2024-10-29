@@ -1,0 +1,85 @@
+object frmAboutBox: TfrmAboutBox
+  Left = 392
+  Top = 133
+  BorderStyle = bsDialog
+  Caption = 'About PhotoEn'
+  ClientHeight = 157
+  ClientWidth = 402
+  Color = clBtnFace
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 8
+    Top = 8
+    Width = 385
+    Height = 105
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 0
+    object ProductName: TLabel
+      Left = 8
+      Top = 8
+      Width = 371
+      Height = 47
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'PhotoEn'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -43
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      IsControl = True
+    end
+    object lblCopyright: TLabel
+      Left = 8
+      Top = 61
+      Width = 367
+      Height = 13
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Copyright 1998 - 2098 by Xequte'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      IsControl = True
+    end
+    object Label1: TLabel
+      Left = 8
+      Top = 80
+      Width = 367
+      Height = 13
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'http://www.ImageEn.com'
+      Color = clBtnFace
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsUnderline]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+      OnClick = Label1Click
+      IsControl = True
+    end
+  end
+  object OKButton: TButton
+    Left = 328
+    Top = 121
+    Width = 65
+    Height = 23
+    Caption = 'Close'
+    Default = True
+    ModalResult = 1
+    TabOrder = 1
+    IsControl = True
+  end
+end
